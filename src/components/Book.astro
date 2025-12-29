@@ -1,18 +1,43 @@
 ---
 import '../styles/global.css';
-import book1 from '../assets/prueba.png';
+import img9610 from '../assets/gallery/IMG_9610.JPG';
+import img9556 from '../assets/gallery/IMG_9556.JPG';
+import img9586 from '../assets/gallery/IMG_9586.JPG';
+import img9569 from '../assets/gallery/IMG_9569.JPG';
+import img9599 from '../assets/gallery/IMG_9599.JPG';
+import img9554 from '../assets/gallery/IMG_9554.JPG';
+import img9557 from '../assets/gallery/IMG_9557.JPG';
+import img9623 from '../assets/gallery/IMG_9623.JPG';
+
+const images = [
+    img9610.src,
+    img9556.src,
+    img9586.src,
+    img9569.src,
+    img9599.src,
+    img9554.src,
+    img9557.src,
+    img9623.src
+];
 ---
 
 <div class="w-full">
     <div class="flex items-center justify-center h-20">
         <h2 class="text-5xl">Book</h2>
     </div>
-    <div class="grid grid-cols-3 gap-4 p-4">
-        <img src={book1.src} alt="Book 1">
-        <img src={book1.src} alt="Book 1">
-        <img src={book1.src} alt="Book 1">
-        <img src={book1.src} alt="Book 1">
-        <img src={book1.src} alt="Book 1">
-        <img src={book1.src} alt="Book 1">
+    <div class="grid md:grid-cols-3 gap-4 p-4">
+        {images.map((img) => (
+            <div class="flex items-center justify-center">
+                <img src={img} alt={`Book Image ${img}`} class="max-w-full h-auto" />
+            </div>
+            ))
+        }
     </div>
 </div>
+
+<script>
+	import SimpleParallax from 'simple-parallax-js';
+
+	const image = document.querySelector('img');
+	new SimpleParallax(image);
+</script>
