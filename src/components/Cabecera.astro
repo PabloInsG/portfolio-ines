@@ -4,11 +4,10 @@ import logo from '../assets/logo_IM-removebg-preview.png';
 import Scroll from './Scroll.astro';
 ---
 <div class="w-full h-screen">
-	<div class="bg-black w-full z-10 h-1/10 flex items-center justify-center">
+	<div class="bg-black w-full z-20 h-1/10 flex items-center justify-center">
 		<img src={logo.src} class="h-32" alt="Logo Inés Molina">
 	</div>
-	<div class="h-9/10 flex items-center justify-center imagen">
-		<div class="w-full h-full opacity-35 absolute bg-black"></div>
+	<div class="flex items-center justify-center imagen">
 		<h1 class="text-5xl text-center mt-20 z-10 text-white">Inés Molina Castro</h1>
 		<Scroll />
 	</div>
@@ -26,7 +25,7 @@ import Scroll from './Scroll.astro';
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
-		position: relative;
 		background-image: url("../assets/gallery/IMG_9556.JPG");
+		height: 90vh;
 	}
 </style>
