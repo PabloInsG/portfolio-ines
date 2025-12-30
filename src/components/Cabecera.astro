@@ -1,14 +1,16 @@
 ---
 import '../styles/global.css';
 import logo from '../assets/logo_IM-removebg-preview.png';
+import Scroll from './Scroll.astro';
 ---
 <div class="w-full h-screen">
 	<div class="bg-black w-full z-10 h-1/10 flex items-center justify-center">
 		<img src={logo.src} class="h-32" alt="Logo Inés Molina">
 	</div>
-	<div class="h-9/10 flex items-center justify-center bg-[url('../assets/gallery/IMG_9556.JPG')] imagen relative">
+	<div class="h-9/10 flex items-center justify-center bg-[url('../assets/gallery/IMG_9556.JPG')] imagen">
 		<div class="w-full h-full opacity-35 absolute bg-black"></div>
 		<h1 class="text-5xl text-center mt-20 z-10 text-white">Inés Molina Castro</h1>
+		<Scroll />
 	</div>
 </div>
 

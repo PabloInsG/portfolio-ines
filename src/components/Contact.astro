@@ -1,9 +1,27 @@
 ---
 import '../styles/global.css';
+import SocialPills from './SocialPills.astro';
+import Mail from '../icons/Mail.astro';
+import Instagram from '../icons/Instagram.astro';
+import Footer from './Footer.astro';
 ---
 
-<div class="w-full h-screen">
-    <div class="flex items-center justify-center h-20">
+<div class="w-full md:h-screen">
+    <div class="flex items-center justify-center h-1/12">
         <h2 class="text-5xl">Contacto</h2>
     </div>
+    <div class="flex flex-col p-4 md:h-10/12">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione iste quasi dolores, quidem voluptatibus aut dolor nesciunt distinctio vel! Harum nesciunt iste esse accusamus voluptas laborum explicabo voluptatem autem reiciendis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi commodi a, rerum ullam eligendi necessitatibus. Natus nihil necessitatibus tenetur neque laboriosam, repudiandae modi non? Ut quasi iure quod laudantium atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolores ullam, illo ducimus optio maiores consequuntur delectus? Doloribus alias deserunt vitae vel. Illo omnis dolores aut facere qui. Temporibus, voluptatibus?</p>
+        <div class="flex flex-col md:flex-row gap-4">
+            <SocialPills href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=inesmolinacastro@gmail.com" class="mt-2 hover:scale-110">
+                        <Mail class="size-4 md:size-6"></Mail>
+                        inesmolinacastro@gmail.com
+            </SocialPills>
+            <SocialPills href="https://www.instagram.com/ines78yt/" class="mt-2 hover:scale-110">
+                <Instagram class="size-4 md:size-6"></Instagram>
+                @ines78yt
+            </SocialPills>
+        </div>
+    </div>
+    <Footer />
 </div>
