@@ -1,7 +1,9 @@
-window.addEventListener("scroll", function () {
-    const cabecera = document.querySelector(".cabecera");
-    const scrollY = window.scrollY;
-    if(scrollY < cabecera.offsetHeight) {
-        cabecera.style.opacity = 0.93 - scrollY / cabecera.offsetHeight;
-    }
-});
+import $ from "jquery";
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 50) {
+    $('.cabecera').fadeOut("fast");
+  } else {
+    $('.cabecera').fadeIn("fast");
+  }
+}); 
