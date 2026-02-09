@@ -4,16 +4,16 @@ import logo from '../assets/logo_IM-removebg-preview.png';
 import fondo from '../assets/gallery/IMG_9556.JPG';
 import Scroll from './Scroll.astro';
 ---
-<div class="w-full h-screen">
-	<div class="bg-black w-full z-20 h-1/10 flex items-center justify-center">
+<div class="w-full h-screen flex flex-col">
+	<div class="bg-black fixed w-full h-1/10 flex items-center justify-center cabecera">
 		<img src={logo.src} class="h-32" alt="Logo Inés Molina">
 	</div>
-	<div class="flex items-center justify-center h-9/10 w-full">
-		<div class="absolute -z-10 w-full h-[90vh]">
+	<div class="flex items-center justify-center h-screen w-full">
+		<div class="fixed -z-10 w-full h-full">
 			<div class="opacity-40 absolute bg-black w-full h-full"></div>
 			<img src={fondo.src} class="w-full h-full object-cover object-[25%_37.9%]" id="fondo" alt="">
 		</div>
-		<h1 class="text-5xl text-center mt-20 z-10 text-white">Inés Molina Castro</h1>
+		<h1 class="text-7xl text-center mt-20 z-10 text-white">Inés Molina Castro</h1>
 		<Scroll />
 	</div>
 </div>
