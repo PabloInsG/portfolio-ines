@@ -1,0 +1,102 @@
+---
+import '../styles/global.css';
+import Experiencias from './Experiencias.astro';
+const exp = [
+    {
+        date: ' ',
+        title: 'LA BOLA NEGRA',
+        description: 'Figuración normal.',
+    },
+    {
+        date: '',
+        title: 'ÚLTIMA INOCENCIA',
+        description: 'Cortometraje estudiantil.' 
+    }
+]
+const expTeatro = [
+    {
+        date: ' ',
+        title: 'EL SUEÑO DE UNA NOCHE DE VERANO',
+        description: 'Dirección y papel secundario.',
+    },
+    {
+        date: '',
+        title: 'GREASE',
+        description: 'Papel principal.' 
+    },
+    {
+        date: '',
+        title: 'CON FALDAS Y A LO LOCO',
+        description: 'Papel secundario.' 
+    }
+]
+
+const habilidades = [
+    {
+        date: ' ',
+        title: 'Voz versátil para locución publicitaria y doblaje (con maquetas de voz disponibles)',
+    },
+    {
+        date: '',
+        title: 'Improvisación escénica',
+    },
+    {
+        date: '',
+        title: 'Piano (nivel avanzado)',
+    },
+    {
+        date: ' ',
+        title: 'Conocimientos de música y ritmo aplicados a la interpretación',
+    },
+    {
+        date: '',
+        title: 'Expresividad corporal y coordinación escénica',
+    },
+    {
+        date: '',
+        title: 'Patinaje (nivel avanzado)',
+    },
+    {
+        date: ' ',
+        title: 'Esquí (nivel avanzado)',
+    },
+    {
+        date: '',
+        title: 'Facilidad para el trabajo en equipo y adaptación a diferentes registros',
+    }
+]
+---
+
+<div class="w-full bg-neutral-950 z-10">
+    <div class="flex items-center justify-center h-40">
+        <h2 class="text-7xl">Experiencia</h2>
+    </div>
+    <div class="flex flex-col justify-center p-4 text-3xl lg:w-6/12 mx-auto gap-12">
+        <ol class="relative border-s border-gray-200 dark:border-white-700 ml-4 mt-4">                  
+            <h3 class="text-3xl ml-3 mb-5">CINE</h3>
+            {
+                exp.map(exp=> (
+                        <li class="mb-10 ms-4">
+                                <Experiencias {...exp} />
+                        </li>
+                    ))
+            }
+            <h3 class="text-3xl ml-3 mb-5">TEATRO</h3>
+            {
+                expTeatro.map(expTeatro=> (
+                        <li class="mb-10 ms-4">
+                                <Experiencias {...expTeatro} />
+                        </li>
+                    ))
+            }
+            <h3 class="text-3xl ml-3 mb-5">HABILIDADES</h3>
+            {
+                habilidades.map(habilidades=> (
+                        <li class="mb-10 ms-4">
+                                <Experiencias {...habilidades} />
+                        </li>
+                    ))
+            }
+        </ol>
+    </div>
+</div>
